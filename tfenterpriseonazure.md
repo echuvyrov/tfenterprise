@@ -1,6 +1,6 @@
 # Deploying and Using Private Terraform Enterprise on Azure
 Many Azure customers have adopted open-source [Terraform](https://www.terraform.io) as the infrastructure provisioning and Infrastructure as Code tool of choice. We have worked closely in partnership with HashiCorp, the company behind Terraform, to ensure that support for Terraform in Azure is first-class, and momentum we are seeing indicates that we are indeed headed in that direction. It is only natural then that once customers realize the benefits that Terraform delivers for infrastructure provisioning and are looking to adopt that tool enterprise-wide, questions about collaboration and governance emerge. The Enterprise version of Terraform (generally referred to as Terraform Enterprise) is designed to solve the challenges of using Terraform in a team environment while operating within the enterprise regulatory constraints.
- 
+
 In this blog post, you will learn the basics of installing and running Terraform Enterprise in Azure, as well discover the features that the enterprise version of Terraform brings on top of the open source version. But first, let's go over why you would want to run Terraform Enterprise in Azure.
  
 ## Reasons for Running Terraform Enterprise in Azure
