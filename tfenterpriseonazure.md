@@ -1,9 +1,9 @@
-#Deploying and Using Private Terraform Enterprise on Azure
+# Deploying and Using Private Terraform Enterprise on Azure
 Many Azure customers have adopted open-source [Terraform](https://www.terraform.io) as the infrastructure provisioning and Infrastructure as Code tool of choice. We have worked closely in partnership with HashiCorp, the company behind Terraform, to ensure that support for Terraform in Azure is first-class, and momentum we are seeing indicates that we are indeed headed in that direction. It is only natural then that once customers realize the benefits that Terraform delivers for infrastructure provisioning and are looking to adopt that tool enterprise-wide, questions about collaboration and governance emerge. The Enterprise version of Terraform (generally referred to as Terraform Enterprise) is designed to solve the challenges of using Terraform in a team environment while operating within the enterprise regulatory constraints.
  
 In this blog post, you will learn the basics of installing and running Terraform Enterprise in Azure, as well discover the features that the enterprise version of Terraform brings on top of the open source version. But first, let's go over why you would want to run Terraform Enterprise in Azure.
  
-##Reasons for Running Terraform Enterprise in Azure
+## Reasons for Running Terraform Enterprise in Azure
 A significant number of joint Microsoft and HashiCorp customers (in financial and healthcare services especially) operate within regulatory environments where they must be completely in charge of how  and where their cloud infrastructure gets deployed. That includes knowing that their data, including data about the infrastructure, is in certain geographic locales only, as well having the ability to scale the infrastructure up (or down) as needed. Additionally, customers request varying degrees of availability necessary to meet their internal SLAs. Installing Terraform Enterprise on Azure (also referred to as Private Terraform Enterprise on Azure) allows customers to achieve this flexibility.
  
 Installing and Running Terraform Enterprise in Azure
@@ -17,10 +17,10 @@ Finally, it's important to note the minimum and the recommended requirements for
  
 Once you have decided on the installation type (demo vs prod) and obtained the SSL certificates, follow the [HashiCorp Terraform Enterprise Setup Guide](https://www.terraform.io/docs/enterprise/private/azure-setup-guide.html) to install Terraform Enterprise on Azure.
  
-##Features of Terraform Enterprise
+## Features of Terraform Enterprise
 While this might be reHashing the obvious (pun intended), it’s worth emphasizing that Terraform Enterprise builds on top of the open-source version of Terraform. All the features and HCL configs that work with the open source version will continue working with Terraform Enterprise. What you gain with Terraform Enterprise is governance and collaboration features, so let’s look at what those are.
 
-###Governance with HashiCorp Sentinel
+### Governance with HashiCorp Sentinel
 In 2017, HashiCorp introduced Sentinel, a language that can be used across the HashiCorp suite of products (Vault, Nomad, Consul, in addition to Terraform) to ensure that enterprise governance guidelines are adhered to. In the case of Terraform, this means that you can ensure that infrastructure deployments meet a certain criterion before the infrastructure gets deployed. In the simplest example below, Sentinel policy, defined using its own Sentinel language, ensures that all VMs deployed to Azure contain tags:
 
 ```
@@ -36,7 +36,7 @@ main = rule {
 
 With Sentinel, you can specify elaborate enterprise infrastructure deployment policies as code and have those live alongside your infrastructure as code (HCL) artifacts, ready for deployment and versioning across the number of dev, stage and production environments. Sentinel is available with Terraform Enterprise in Azure.
 
-###Collaboration Features of Terraform Enterprise
+### Collaboration Features of Terraform Enterprise
 [Terraform Enterprise](https://www.hashicorp.com/products/terraform#features) has multiple collaboration features that will benefit teams of any size. Here, I’d like to highlight just two that teams could benefit from immediately.
 
 First, remote state management and locking. ReHashing the obvious again, Terraform maintains state of your infrastructure and it’s important that this state be shared by multiple team members without stepping on each other’s toes. While not strictly a feature of Terraform Enterprise, remote state management accomplishes this state sharing and gives your team a collaborative, shared environment, pre-configured and ready to use.
