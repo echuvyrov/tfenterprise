@@ -5,16 +5,16 @@ In this blog post, you will learn the basics of installing and running Terraform
  
 ## Reasons for Running Terraform Enterprise in Azure
 A significant number of joint Microsoft and HashiCorp customers (in financial and healthcare services especially) operate within regulatory environments where they must be completely in charge of how  and where their cloud infrastructure gets deployed. That includes knowing that their data, including data about the infrastructure, is in certain geographic locales only, as well having the ability to scale the infrastructure up (or down) as needed. Additionally, customers request varying degrees of availability necessary to meet their internal SLAs. Installing Terraform Enterprise on Azure (also referred to as Private Terraform Enterprise on Azure) allows customers to achieve this flexibility.
- 
+
 Installing and Running Terraform Enterprise in Azure
 The basics of installing Terraform in Azure are straightforward - you download an executable, then install and configure it on your infrastructure. HashiCorp has a [detailed blog](https://www.terraform.io/docs/enterprise/private/azure-setup-guide.html) post that walks through the installation and various configuration, including availability options in Azure. Below, I am highlighting what I feel are the important parts of the installation process in Azure.
  
 First, you have three configuration options for deploying Terraform Enterprise in Azure: demo, production and high-availability production (also called [Production-External Services](https://www.terraform.io/docs/enterprise/private/install-installer.html#operational-mode-decision)). The option you choose will dictate how involved the installation process will be: from a single-server deployment with no external dependencies for the demo to multiple servers configured with PostgreSQL database for the high-availability scenarios. As always, spending some time planning the deployment out and making sure it conforms with enterprise governance policies is paramount.
  
 Second, you will need SSL certificates for clients to securely communicate with the server. You should follow your enterprise policies for obtaining one and have that ready before installation. Try and avoid self-signed certificates; if your enterprise policy allows that, you can use Terraform Enterprise built-in integration with Let's Encrypt service for getting your certs during the installation process.
- 
+
 Finally, it's important to note the minimum and the recommended requirements for running Terraform Enterprise in Azure. The D-series machines are recommended, and machines with burstable CPUs (B-series) should be avoided for Terraform Enterprise. Note that you also need at least 50Gb of disk storage - if you are installing a demo environment from the Azure portal, remember to change from the default of 30 Gb. 
- 
+
 Once you have decided on the installation type (demo vs prod) and obtained the SSL certificates, follow the [HashiCorp Terraform Enterprise Setup Guide](https://www.terraform.io/docs/enterprise/private/azure-setup-guide.html) to install Terraform Enterprise on Azure.
  
 ## Features of Terraform Enterprise
