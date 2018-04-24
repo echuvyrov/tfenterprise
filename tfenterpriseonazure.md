@@ -21,7 +21,7 @@ Once you have decided on the installation type (demo vs prod) and obtained the S
 While this might be reHashing the obvious (pun intended), it’s worth emphasizing that Terraform Enterprise builds on top of the open-source version of Terraform. All the features and HCL configs that work with the open source version will continue working with Terraform Enterprise. What you gain with Terraform Enterprise are governance and collaboration features, so let’s look at what those are.
 
 ### Governance with HashiCorp Sentinel
-In 2017, HashiCorp introduced Sentinel, a language that can be used across the HashiCorp suite of products (Vault, Nomad and Consul, in addition to Terraform) to ensure that enterprise governance guidelines are adhered to. In the case of Terraform, using Sentinel means feeling certain that infrastructure deployments meet enterprise criteria for infrastructure deployments. In the simplest example below, Sentinel policy, defined using its own Sentinel language, ensures that all VMs deployed to Azure contain tags:
+In 2017, HashiCorp introduced Sentinel, a language that can be used across the HashiCorp suite of products (Vault, Nomad and Consul, in addition to Terraform) to ensure that enterprise governance guidelines are adhered to. In the case of Terraform, using Sentinel means feeling certain that infrastructure deployments conform to enterprise governance policies. In the simplest example below, Sentinel policy, defined using its own Sentinel language, ensures that all VMs deployed to Azure contain tags:
 
 ```
 import "tfplan"
