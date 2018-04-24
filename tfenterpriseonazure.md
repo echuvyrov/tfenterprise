@@ -34,13 +34,17 @@ main = rule {
 }
 ```
 
-With Sentinel, you can specify elaborate enterprise infrastructure deployment policies as code and have those live alongside your infrastructure as code (HCL) artifacts, ready for deployment and versioning across the number of dev, stage and production environments. Sentinel is available with Terraform Enterprise in Azure.
+With Sentinel, you can specify elaborate enterprise infrastructure deployment policies as code and have those live alongside your infrastructure as code (HCL) artifacts, ready versioning and provisioning across the number of dev, stage and production environments. Sentinel is available with Terraform Enterprise in Azure.
 
 ### Collaboration Features of Terraform Enterprise
-[Terraform Enterprise](https://www.hashicorp.com/products/terraform#features) has multiple collaboration features that will benefit teams of any size. Here, I’d like to highlight just two that teams could benefit from immediately.
+Terraform Enterprise has [multiple collaboration features](https://www.hashicorp.com/products/terraform#features) that will benefit teams of any size. Here, I’d like to highlight just two that could benefit teams immediately.
 
 First, remote state management and locking. ReHashing the obvious again, Terraform maintains state of your infrastructure and it’s important that this state be shared by multiple team members without stepping on each other’s toes. While not strictly a feature of Terraform Enterprise, remote state management accomplishes this state sharing and gives your team a collaborative, shared environment, pre-configured and ready to use.
 
 Second, version control. Any conversation about code, including Infrastructure as Code, must have a pre-requisite conversation about versioning and source control. Terraform Enterprise integrates with your existing version control system, allowing you to visually track, branch and rollback your infrastructure as needed.
 
-We are very pleased to give our customers the ability to [run Terraform in Azure](https://www.terraform.io/docs/enterprise/private/azure-setup-guide.html).
+We are looking forward to learning about how you use Terraform and Terraform Enterprise in Azure. You can follow the links below to learn more about the products and their availability and support in Azure:
+
++ [OSS Terraform in Azure Document Hub](https://aka.ms/tfhub)
++ [Terraform in Azure Official Documentation](https://aka.ms/terraform)
++ [Terraform Enterprise](https://www.hashicorp.com/products/terraform#features)
